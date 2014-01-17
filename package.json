@@ -28,7 +28,8 @@
     "test": "tap ./test"
   },
   "devDependencies": {
-    "tap": "~0.4.8"
+    "tap": "~0.4.8",
+    "express": "~3.4.8"
   },
   "keywords": [
     "express routing",
