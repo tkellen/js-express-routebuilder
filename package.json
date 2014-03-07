@@ -1,7 +1,7 @@
 {
   "name": "express-routebuilder",
   "description": "Simple declarative route configuration for Express without leaky abstractions.",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/tkellen/node-express-routebuilder",
   "author": {
     "name": "Tyler Kellen",
