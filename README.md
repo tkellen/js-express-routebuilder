@@ -1,4 +1,4 @@
-# express-routebuilder [![Build Status](https://secure.travis-ci.org/tkellen/express-routebuilder.png?branch=master)](http://travis-ci.org/tkellen/express-routebuilder)
+# express-routebuilder [![Build Status](https://secure.travis-ci.org/tkellen/node-express-routebuilder.png?branch=master)](http://travis-ci.org/tkellen/node-express-routebuilder)
 > Simple declarative route configuration for Express without leaky abstractions.
 
 ## Example
