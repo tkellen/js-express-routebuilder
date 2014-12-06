@@ -1,10 +1,9 @@
-module.exports = function (express, routes) {
-  var app = express();
+module.exports = function (router, routes) {
   Object.keys(routes).forEach(function (verb) {
      var endpoints = routes[verb];
      Object.keys(endpoints).forEach(function (endpoint) {
-       app[verb].call(app, endpoint, endpoints[endpoint]);
+       router[verb].call(router, endpoint, endpoints[endpoint]);
      });
   });
-  return app;
+  return router;
 };
