@@ -25,11 +25,12 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
-    "test": "tap ./test"
+    "test": "mocha ./test"
   },
   "devDependencies": {
-    "tap": "~0.4.8",
-    "express": "~3.4.8"
+    "express": "~3.4.8",
+    "mocha": "^2.1.0",
+    "sinon": "^1.12.2"
   },
   "keywords": [
     "express routing",
