@@ -83,8 +83,8 @@ app.use(routeBuilder(express, routes));
 Upgrading is simply a matter of refactoring that to be of this form:
 
 ```js
-// v2.0 API
-routeBuilder(app, routes);
+// v2.x API
+routeBuilder(app, routes, prefix);
 ```
 
 If you were namespacing routes you will now need to use either an
@@ -95,21 +95,18 @@ In the following example, we will show how to accomplish this using a Router.
 // v1.x namespacing API
 app.use('/namespace', routeBuilder(express, routes));
 
-// v2.0 namespacing API
-var router = express.Router();
-routeBuilder(router, routes);
-app.use('/namespace', router);
+// v2.x namespacing API
+app.use('/namespace', routeBuilder(express.Router(), routes));
+// or
+app.use(routeBuilder(express.Router(), routes, '/namespace'));
 ```
 
 ### Release History
+* 2014-02-01 - v2.1.0 - Support prefix parameter.
 
-* 2014-12-30 - v2.0.0
-  - Express applications are no longer created by the library. This has two benefits:
-    1. It removes any coupling that this library had to Express
-    2. When used with Express, it enables one to specify options for the routes configured by RouteBuilder
+* 2014-12-30 - v2.0.0 - Express applications are no longer created by the library. This has two benefits:
+  1. It removes any coupling that this library had to Express
+  2. When used with Express, it enables one to specify options for the routes configured by RouteBuilder
 
-* 2014-03-07 - v1.0.0
-  - No changes. Just a version bump.
-
-* 2014-01-16 - v0.1.0
-  - Initial release
+* 2014-03-07 - v1.0.0 - No changes. Just a version bump.
+* 2014-01-16 - v0.1.0 - Initial release
