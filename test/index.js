@@ -19,7 +19,7 @@ describe('Routebuilder', function() {
       this.routes.get = {
         '/': ['one', 'two']
       };
-      routeBuilder(this.router, this.routes);
+      routeBuilder(this.router, this.routes, '/prefix');
     });
 
     it('should execute the associated method once', function() {
@@ -30,8 +30,9 @@ describe('Routebuilder', function() {
       assert(this.router.get.calledOn(this.router));
     });
 
-    it('should pass the route and the associated object as the arguments', function() {
-      assert(this.router.get.calledWith('/', ['one', 'two']));
+    it('should pass the route with optional prefix and associated array as arguments', function() {
+      assert(this.router.get.calledWith('/prefix/', ['one', 'two']));
     });
+
   });
 });
